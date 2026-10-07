@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c4fkcs60bjyto"]
+
+[ext_resource type="Script" uid="uid://uplspvml7i5i" path="res://scripts/water.gd" id="1_7wcun"]
+[ext_resource type="Texture2D" uid="uid://brdwkyck32qp1" path="res://assets/game/collectibles/gem_blue.png" id="2_dcmoc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1xlpn"]
+size = Vector2(8, 8)
+
+[node name="Water" type="Area2D" unique_id=109232478]
+collision_mask = 2
+script = ExtResource("1_7wcun")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1379039259]
+texture = ExtResource("2_dcmoc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=715551453]
+shape = SubResource("RectangleShape2D_1xlpn")

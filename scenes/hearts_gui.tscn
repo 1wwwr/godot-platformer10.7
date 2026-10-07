@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://xrjkx4mj10oo"]
+
+[ext_resource type="Script" uid="uid://b6d0ekcbe0mu3" path="res://scripts/hearts_gui.gd" id="1_p2gwr"]
+[ext_resource type="Texture2D" uid="uid://b7l4qmvfhgcqt" path="res://assets/kenney/tiles/tile_0044.png" id="1_wnx7c"]
+
+[node name="HeartsGUI" type="Panel" unique_id=1798094839]
+visible = false
+custom_maximum_size = Vector2(18, 18)
+offset_left = 1.0
+offset_right = 19.0
+offset_bottom = 18.0
+script = ExtResource("1_p2gwr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1704048815]
+position = Vector2(9, 10)
+texture = ExtResource("1_wnx7c")

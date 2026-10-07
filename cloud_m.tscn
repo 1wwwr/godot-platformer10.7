@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bcpultcg2suib"]
+
+[ext_resource type="Texture2D" uid="uid://cmcbnefs0bxd0" path="res://assets/kenney/tiles/tile_0156.png" id="1_nn8j4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjqgx"]
+size = Vector2(10, 6)
+
+[node name="cloud_m" type="AnimatableBody2D" unique_id=1225926489]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1718768708]
+texture = ExtResource("1_nn8j4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1039419584]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_bjqgx")
+one_way_collision = true

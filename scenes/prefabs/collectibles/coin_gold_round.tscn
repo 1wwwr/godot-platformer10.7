@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cnqt0sdrsanc0"]
+
+[ext_resource type="Script" uid="uid://cdcvtfih4l30e" path="res://scripts/coin_gold_round.gd" id="1_1q6pd"]
+[ext_resource type="Texture2D" uid="uid://cb8de6nm1sbvw" path="res://assets/game/collectibles/coin_gold_round.png" id="1_texture"]
+
+[sub_resource type="CircleShape2D" id="Shape_coin"]
+radius = 5.0
+
+[node name="CoinGoldRound" type="Area2D" unique_id=738115061 groups=["collectible"]]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_1q6pd")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=460302793]
+texture_filter = 1
+texture = ExtResource("1_texture")
+
+[node name="PickupArea" type="CollisionShape2D" parent="." unique_id=690365870]
+shape = SubResource("Shape_coin")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

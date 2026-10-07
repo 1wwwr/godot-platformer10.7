@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://d2a10rggpvcrf"]
+
+[ext_resource type="Script" uid="uid://dgvbdb2kltqmx" path="res://scripts/status_panel.gd" id="1_0jk47"]
+[ext_resource type="Texture2D" uid="uid://d4bnj20dwk7e7" path="res://assets/kenney/characters/tile_0000.png" id="1_cq83v"]
+[ext_resource type="Texture2D" uid="uid://b7l4qmvfhgcqt" path="res://assets/kenney/tiles/tile_0044.png" id="2_k1qef"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjqgx"]
+atlas = ExtResource("1_cq83v")
+region = Rect2(2, 4, 20, 15)
+
+[node name="StatusPanel" type="HBoxContainer" unique_id=1747938781]
+visible = false
+offset_right = 25.0
+offset_bottom = 15.0
+script = ExtResource("1_0jk47")
+
+[node name="AvatarBox" type="PanelContainer" parent="." unique_id=2070053666]
+layout_mode = 2
+
+[node name="Avatar" type="TextureRect" parent="AvatarBox" unique_id=2044894745]
+layout_mode = 2
+texture = SubResource("AtlasTexture_bjqgx")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=992841740]
+layout_mode = 2
+
+[node name="Node" type="Node" parent="." unique_id=1835310838]
+
+[node name="HeartsGUI" type="Panel" parent="Node" unique_id=2049895048]
+visible = false
+custom_maximum_size = Vector2(18, 18)
+offset_left = 40.0
+offset_right = 58.0
+offset_bottom = 18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/HeartsGUI" unique_id=1577789280]
+visible = false
+position = Vector2(9, 9)
+texture = ExtResource("2_k1qef")
+
+[node name="HeartsGUI2" type="Panel" parent="Node" unique_id=1584975084]
+visible = false
+custom_maximum_size = Vector2(18, 18)
+offset_left = 20.0
+offset_right = 38.0
+offset_bottom = 18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/HeartsGUI2" unique_id=975217006]
+visible = false
+position = Vector2(9, 9)
+texture = ExtResource("2_k1qef")
+
+[node name="HeartsGUI3" type="Panel" parent="Node" unique_id=622118131]
+visible = false
+custom_maximum_size = Vector2(18, 18)
+offset_left = 61.0
+offset_right = 79.0
+offset_bottom = 18.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Node/HeartsGUI3" unique_id=492451617]
+visible = false
+position = Vector2(9, 10)
+texture = ExtResource("2_k1qef")

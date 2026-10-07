@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://drsuewbt5wtsf"]
+
+[ext_resource type="Texture2D" uid="uid://bfkn4aaas17ag" path="res://assets/kenney/characters/tile_0016.png" id="1_5jc4t"]
+[ext_resource type="PackedScene" uid="uid://dvi0hkuosnt4e" path="res://killzone.tscn" id="2_4l1t8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjqgx"]
+size = Vector2(10, 10)
+
+[node name="Slime" type="Node2D" unique_id=1003563316]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1512683082]
+texture = ExtResource("1_5jc4t")
+
+[node name="Killzone" parent="." unique_id=1868251185 instance=ExtResource("2_4l1t8")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1802631568]
+position = Vector2(-1, 5)
+shape = SubResource("RectangleShape2D_bjqgx")
